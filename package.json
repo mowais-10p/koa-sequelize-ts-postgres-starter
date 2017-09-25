@@ -1,0 +1,73 @@
+{
+  "name": "cscore-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "HTTP API for CScore",
+  "scripts": {
+    "start": "node bin/server",
+    "watch": "nodemon bin/server",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "lint:fix": "tslint -c tslint.json src/**/*.ts --fix",
+    "pretest": "npm run lint",
+    "test": "jest --coverage",
+    "sqlz:createdb": "./node_modules/.bin/sequelize db:create",
+    "sqlz:migrate": "./node_modules/.bin/sequelize db:migrate",
+    "sqlz:undo": "./node_modules/.bin/sequelize db:migrate:undo",
+    "sqlz:new": "./node_modules/.bin/sequelize migration:create"
+  },
+  "author": "Mohammad Umair Khan <mohammad.umair.k@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/boom": "^4.3.7",
+    "@types/koa-bodyparser": "^3.0.25",
+    "@types/sequelize": "^4.0.73",
+    "aws-sdk": "^2.119.0",
+    "boom": "^5.2.0",
+    "cors": "^2.8.4",
+    "debug": "^3.0.1",
+    "jwk-to-pem": "^1.2.6",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-bunyan-logger": "^2.0.0",
+    "koa-compose": "^4.0.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.2.1",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "request-promise-native": "^1.0.4",
+    "sequelize": "^4.8.4",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.2",
+    "@types/debug": "0.0.30",
+    "@types/jest": "^20.0.8",
+    "@types/koa": "^2.0.39",
+    "@types/koa-json": "^2.0.17",
+    "@types/koa-router": "^7.0.23",
+    "jest": "^21.1.0",
+    "nodemon": "^1.12.0",
+    "sequelize-cli": "^3.0.0-3",
+    "ts-jest": "^21.0.1",
+    "ts-list": "^1.0.2",
+    "typescript": "^2.5.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/tests/.*\\.(ts|tsx|js)$",
+    "collectCoverageFrom": [
+      "**/**.{ts}",
+      "!**/node_modules/**",
+      "!**/*.{d.ts}",
+      "!**/*.{test.ts}"
+    ]
+  }
+}
