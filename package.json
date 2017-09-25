@@ -1,8 +1,8 @@
 {
-  "name": "cscore-api",
+  "name": "koa-sequelize-ts-postgres-starter",
   "private": true,
   "version": "1.0.0",
-  "description": "HTTP API for CScore",
+  "description": "HTTP API for Koa Sequelize Sample",
   "scripts": {
     "start": "node bin/server",
     "watch": "nodemon bin/server",
@@ -15,7 +15,7 @@
     "sqlz:undo": "./node_modules/.bin/sequelize db:migrate:undo",
     "sqlz:new": "./node_modules/.bin/sequelize migration:create"
   },
-  "author": "Mohammad Umair Khan <mohammad.umair.k@gmail.com>",
+  "author": "Mohammad Owais Kalam <mok.developer@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@types/boom": "^4.3.7",

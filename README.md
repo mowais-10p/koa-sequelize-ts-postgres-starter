@@ -11,6 +11,7 @@
 
 ### Configuration
 
+- Please set `env` variable when working with docker to `env/dev`
 - Sequelize migration and configuration can be found at 'database/config.json'
 - For new tables addition on Sequelize context, add table file in models and set their path to models/index.ts. Please check role.ts for as an example
 
@@ -60,7 +61,7 @@ npm run sqlz:migrate
 #### Run
 ```bash
 # you can set the DEBUG environment variable through -e DEBUG={value} 
-λ docker run -dp 4000:4000 cscore-api
+λ docker run -dp 4000:4000 koa-sequelize-ts-postgres-starter
 ```
 or simply
 ```bash

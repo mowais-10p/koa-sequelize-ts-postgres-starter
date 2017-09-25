@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    container_name: cscore-api
+    container_name: koa-sequelize-ts-postgres-starter
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,7 +22,7 @@ services:
 
   postgres:
     image: postgres:9.6.5-alpine
-    container_name: cscore-db
+    container_name: koa-sequelize-ts-postgres-starter-db
     volumes:
       - "postgres:/var/lib/postgresql/data"
     ports:

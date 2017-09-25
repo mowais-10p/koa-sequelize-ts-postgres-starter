@@ -2,7 +2,7 @@ export class Config {
     public static readonly development = {
         username: 'postgres',
         password: 'postgres',
-        database: 'cscoredev',
+        database: 'testdb',
         host: '127.0.0.1',
         port: 5433,
         dialect: 'postgres',
@@ -14,7 +14,7 @@ export class Config {
     public static readonly test = {
         username: 'postgres',
         password: 'postgres',
-        database: 'cscoretest',
+        database: 'testdb',
         host: '127.0.0.1',
         port: 5433,
         dialect: 'postgres',
@@ -26,7 +26,7 @@ export class Config {
     public static readonly production = {
         username: 'postgres',
         password: 'postgres',
-        database: 'cscore',
+        database: 'testdb',
         host: '127.0.0.1',
         port: 5433,
         dialect: 'postgres',
